@@ -43,7 +43,7 @@
 		<ul class="navbar-nav">
             <li class="nav-item dropdown dropdown-user">
                 <a class="navbar-nav-link dropdown-toggle" data-toggle="dropdown">
-                    <img src="{{ auth()->user()->getProfile()->photo ? asset('storage/'.auth()->user()->getProfile()->photo) : asset('asset/global_assets/images/placeholders/placeholder.jpg') }}" class="rounded-circle" alt="">
+                    <img src="{{ auth()->user()->getProfile()->photo ? asset('storage/logo/'.auth()->user()->getProfile()->photo) : asset('asset/global_assets/images/placeholders/user.jpg') }}" class="rounded-circle" alt="">
                     <span>{{auth()->user()->name}}</span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">

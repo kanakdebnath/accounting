@@ -20,6 +20,12 @@ Route::group(['middleware' => ['install']], function () {
 		Route::post('/logo', 'SettingController@upload_logo')->name('logo');
 		Route::post('/api', 'SettingController@api')->name('api');
 		Route::post('/social', 'SettingController@api')->name('social');
+
+		/*::::::::::::::::::Profile:::::::::::::::::::::*/
+		Route::get('/profile', 'SettingController@profile')->name('profile');
+		Route::post('/profile/update', 'SettingController@profile_update')->name('profile.update');
+
+		
 		/*::::::::::::::::::language:::::::::::::::::::::*/
 		Route::get('/language', 'LanguageController@index')->name('language');
 		Route::match(['get', 'post'], 'create', 'LanguageController@create')->name('language.create');

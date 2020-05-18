@@ -55,28 +55,49 @@
 							</div>
 						   </div>
 
-						   <div class="col-lg-6">
+						   <div class="col-lg-4">
 							<div class="form-group">
 								{{ Form::label('email', _lang('Email') , ['class' => 'col-form-label ']) }}
 								{{ Form::text('email', get_option('email'), ['class' => 'form-control', 'placeholder' => _lang('Email')]) }}
 							</div>
 						   </div>
 
-						   <div class="col-lg-6">
+						   <div class="col-lg-4">
 							<div class="form-group">
 								{{ Form::label(_lang('phone'), 'Phone' , ['class' => 'col-form-label ']) }}
 								{{ Form::text('phone',get_option('phone'), ['class' => 'form-control', 'placeholder' => _lang('Phone')]) }}
 							</div>
 						   </div>
 
-						   <div class="col-lg-6">
+						   <div class="col-lg-4">
+							<div class="form-group">
+								{{ Form::label('print_layout', _lang('Print Layout') , ['class' => 'col-form-label ']) }}
+							   <select name="print_layout" class="form-control select">
+								<option {{ get_option('print_layout')==0?'selected':'' }} value="0">Layout 1</option>
+								<option {{ get_option('print_layout')==1?'selected':'' }} value="1">Layout 2</option>
+								</select>
+							</div>
+						   </div>
+
+
+						   <div class="col-lg-4">
 							<div class="form-group">
 								{{ Form::label('alt_phone', _lang('Alernative Phone') , ['class' => 'col-form-label ']) }}
 								{{ Form::text('alt_phone', get_option('alt_phone'), ['class' => 'form-control', 'placeholder' => _lang('Alernative Phone')]) }}
 							</div>
 						   </div>
 
-						   <div class="col-lg-6">
+						      <div class="col-lg-4">
+							<div class="form-group">
+								{{ Form::label('registration', _lang('Allow Registration') , ['class' => 'col-form-label ']) }}
+							   <select name="registration" class="form-control select">
+								<option {{ get_option('registration')==1?'selected':'' }} value="1">Allow</option>
+								<option {{ get_option('registration')==0?'selected':'' }} value="0">Hide</option>
+								</select>
+							</div>
+						   </div>
+
+						   <div class="col-lg-4">
 							<div class="form-group">
 								{{ Form::label('start_date', _lang('Starting date') , ['class' => 'col-form-label ']) }}
 								{{ Form::text('start_date', get_option('start_date'), ['class' => 'form-control pickadate-accessibility', 'placeholder' => _lang('Starting date')]) }}
@@ -133,7 +154,7 @@
 
 						    <div class="text-right">
 		                    <button type="submit" class="btn btn-primary"  id="submit">{{_lang('Update Setting')}}<i class="icon-arrow-right14 position-right"></i></button>
-		                    <button type="button" class="btn btn-link" id="submiting" style="display: none;">Processing <img src="{{ asset('ajaxloader.gif') }}" width="80px"></button>
+		                    <button type="button" class="btn btn-link" id="submiting" style="display: none;">{{_lang('Processing')}} <img src="{{ asset('ajaxloader.gif') }}" width="80px"></button>
 
 		                    </div>
 
@@ -171,7 +192,7 @@
 								</div>
 						    <div class="text-right">
 		                    <button type="submit" class="btn btn-primary"  id="submit">{{_lang('Update Setting')}}<i class="icon-arrow-right14 position-right"></i></button>
-		                    <button type="button" class="btn btn-link" id="submiting" style="display: none;">Processing <img src="{{ asset('ajaxloader.gif') }}" width="80px"></button>
+		                    <button type="button" class="btn btn-link" id="submiting" style="display: none;">{{_lang('Processing')}} <img src="{{ asset('ajaxloader.gif') }}" width="80px"></button>
 
 		                    </div>
 							</fieldset>	
@@ -247,7 +268,7 @@
 								 </div>
 							<div class="text-right">
 		                    <button type="submit" class="btn btn-primary"  id="submit">{{_lang('Update Setting')}}<i class="icon-arrow-right14 position-right"></i></button>
-		                    <button type="button" class="btn btn-link" id="submiting" style="display: none;">Processing <img src="{{ asset('ajaxloader.gif') }}" width="80px"></button>
+		                    <button type="button" class="btn btn-link" id="submiting" style="display: none;">{{_lang('Processing')}} <img src="{{ asset('ajaxloader.gif') }}" width="80px"></button>
 
 		                    </div>
 								 </fieldset>
@@ -292,7 +313,7 @@
 								 </div>
 								<div class="text-right">
 			                    <button type="submit" class="btn btn-primary"  id="submit">{{_lang('Update Setting')}}<i class="icon-arrow-right14 position-right"></i></button>
-			                    <button type="button" class="btn btn-link" id="submiting" style="display: none;">Processing <img src="{{ asset('ajaxloader.gif') }}" width="80px"></button>
+			                    <button type="button" class="btn btn-link" id="submiting" style="display: none;">{{_lang('Processing')}} <img src="{{ asset('ajaxloader.gif') }}" width="80px"></button>
 
 			                    </div>
 								 </fieldset>

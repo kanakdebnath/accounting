@@ -22,6 +22,17 @@
 			</a>
 		</li>
 		@endif
+
+		 <li class="nav-item">
+            <a href="{{ route('admin.profile') }}" class="nav-link{{ Request::is('admin/profile') ? ' active' : '' }}">
+                <i class="icon-user"></i>
+                <span>
+                    {{_lang('Profile')}}
+                </span>
+            </a>
+		</li>
+
+		
        @if(auth()->user()->can('language.view'))
 		<li class="nav-item">
 			<a href="{{ route('admin.language') }}" class="nav-link{{ Request::is('admin/language') ? ' active' : '' }}">
